@@ -2,21 +2,21 @@ def iterate(grid: list) -> list:
     # Copy grid by val
     return_grid = grid[:]
     
-    for i, row in grid:
-        for j, cell in row:
+    for i, row in enumerate(grid):
+        for j, cell in enumerate(row):
             # if alive:
             if(cell):
                 if(fetch_live_neighbors(grid, (i, j)) in(2, 3)):
-                    return_grid[i, j] = True
+                    return_grid[i][j] = True
                 else:
-                    return_grid[i, j] = False
+                    return_grid[i][j] = False
             
             # else, if dead:
             else:
                 if(fetch_live_neighbors == 3):
-                    return_grid[i, j] = True
+                    return_grid[i][j] = True
                 else:
-                    return_grid[i, j] = False
+                    return_grid[i][j] = False
     return return_grid
 
 def fetch_live_neighbors(grid: list, index: tuple) -> int:

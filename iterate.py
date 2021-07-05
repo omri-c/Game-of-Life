@@ -2,8 +2,8 @@ def iterate(grid: list) -> list:
     # Copy grid by val
     return_grid = grid[:]
     
-    for i, _ in grid:
-        for j, cell in grid:
+    for i, row in grid:
+        for j, cell in row:
             # if alive:
             if(cell):
                 if(fetch_live_neighbors(grid, (i, j)) in(2, 3)):

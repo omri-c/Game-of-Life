@@ -1,6 +1,6 @@
 def read_grid_from_file(path: str) -> list:
     grid = []
-    with f as open(path, 'r'):
+    with open(path, 'r') as f:
         lines = f.readlines()
         for l in lines:
             l = l.split(",")

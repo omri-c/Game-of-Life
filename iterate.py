@@ -1,6 +1,6 @@
 def iterate(grid: list) -> list:
     # Copy grid by val
-    return_grid = grid[:]
+    return_grid = [x[:] for x in grid]
     
     for i, row in enumerate(grid):
         for j, cell in enumerate(row):
@@ -13,7 +13,7 @@ def iterate(grid: list) -> list:
             
             # else, if dead:
             else:
-                if(fetch_live_neighbors == 3):
+                if(fetch_live_neighbors(grid, (i, j)) == 3):
                     return_grid[i][j] = True
                 else:
                     return_grid[i][j] = False

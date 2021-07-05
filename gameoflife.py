@@ -1,4 +1,8 @@
 from iterate import fetch_live_neighbors, iterate
+from input_handler import read_grid_from_file
+
+
+read_grid_from_file("grid.txt")
 
 grid = [[False, False, False, False, False], [False, False, False, False, False], [False, False, False, False, False], [False, False, False, False, False], [False, False, False, False, False]]
 grid[1][2] = True

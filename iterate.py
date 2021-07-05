@@ -1,16 +1,23 @@
 def iterate(grid: list) -> list:
-    #Foreach cell:
-        # If alive:
-            # If (live_neighbors is 2 or 3):
-                #alive
-            # else:
-                #dead
-        # else:
-            # if(live_neighbors is 3):
-                # alive
-            # else:
-                # dead 
-    a = 0
+    # Copy grid by val
+    return_grid = grid[:]
+    
+    for i, _ in grid:
+        for j, cell in grid:
+            # if alive:
+            if(cell):
+                if(fetch_live_neighbors(grid, (i, j)) in(2, 3)):
+                    return_grid[i, j] = True
+                else:
+                    return_grid[i, j] = False
+            
+            # else, if dead:
+            else:
+                if(fetch_live_neighbors == 3):
+                    return_grid[i, j] = True
+                else:
+                    return_grid[i, j] = False
+    return return_grid
 
 def fetch_live_neighbors(grid: list, index: tuple) -> int:
     neighbor_indices = []

@@ -4,10 +4,7 @@ def display_grid(grid: list):
     for i, row in enumerate(grid):
         for j, cell in enumerate(row):
             if(cell):
-                sys.stdout.write("X")
+                print("X", end="")
             else:
-                sys.stdout.write("0")
-        sys.stdout.write("\n")
-
-def flush_screen():
-    sys.stdout.flush()
+                print("0", end="")
+        print("\r")

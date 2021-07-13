@@ -10,7 +10,7 @@ class ConsoleDisplay():
             for i, row in enumerate(grid):
                 for j, cell in enumerate(row):
                     if(cell):
-                        print("X", end = "")
+                        print(u"\u2588", end = "")
                     else:
-                        print("0", end="")
+                        print(" ", end="")
                 print("")

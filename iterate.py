@@ -25,7 +25,8 @@ def fetch_live_neighbors(grid: list, index: tuple) -> int:
 
     for i in range(-1, 2):
         for j in range(-1, 2):
-            neighbor_indices.append((index[0] + i, index[1] + j))
+            if(index[0] + i >= 0 and index[1] + j >= 0):
+                neighbor_indices.append((index[0] + i, index[1] + j))
             # remove the current cell from list of indices
     neighbor_indices.remove(index)
 

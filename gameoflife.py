@@ -2,11 +2,19 @@ from display import ConsoleDisplay
 from iterate import fetch_live_neighbors, iterate
 from input_handler import read_grid_from_file
 import time
+import argparse
 
-grid = read_grid_from_file("grid.txt")
+parser = argparse.ArgumentParser(description="Simulate conway's game of life.")
+parser.add_argument("path", type=str, default="grid.txt")
+parser.add_argument("iterations", type=int, default=1000)
+
+args = parser.parse_args()
+
+
+grid = read_grid_from_file(args.path)
 display = ConsoleDisplay()
 
-for i in range(100):
+for i in range(args.iterations):
     display.display_grid(grid)
-    time.sleep(0.1)
+    time.sleep(0.01)
     grid = iterate(grid)

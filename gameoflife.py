@@ -10,7 +10,6 @@ parser.add_argument("iterations", type=int, default=1000, nargs='?')
 
 args = parser.parse_args()
 
-
 grid = read_grid_from_file(args.path)
 display = ConsoleDisplay()
 

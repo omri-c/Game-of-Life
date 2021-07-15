@@ -15,5 +15,5 @@ display = ConsoleDisplay()
 
 for i in range(args.iterations):
     display.display_grid(grid)
-    time.sleep(0.01)
+    time.sleep(0.03)
     grid = iterate(grid)

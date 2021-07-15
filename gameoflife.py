@@ -5,8 +5,8 @@ import time
 import argparse
 
 parser = argparse.ArgumentParser(description="Simulate conway's game of life.")
-parser.add_argument("path", type=str, default="grid.txt")
-parser.add_argument("iterations", type=int, default=1000)
+parser.add_argument("path", type=str, default="grid.txt", nargs='?')
+parser.add_argument("iterations", type=int, default=1000, nargs='?')
 
 args = parser.parse_args()
 
